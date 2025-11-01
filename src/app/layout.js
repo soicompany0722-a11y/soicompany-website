@@ -36,6 +36,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko" className="scroll-smooth">
+      <head>
+        <meta name="color-scheme" content="light only" />
+        <meta name="supported-color-schemes" content="light" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[1440px] mx-auto overflow-x-hidden scroll-j scroll-smooth`}
       >
