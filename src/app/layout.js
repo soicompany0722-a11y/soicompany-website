@@ -28,6 +28,9 @@ export const metadata = {
     "병원 홈페이지",
     "병원 홈페이지 제작",
   ],
+  verification: {
+    google: "0QmkwloXsHGYlaL1qEpylq-RCVRjdnMr8K5H0ZoMmnQ",
+  },
   icons: {
     icon: "/favicon.png",
   },
