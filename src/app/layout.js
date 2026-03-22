@@ -44,9 +44,9 @@ export default function RootLayout({ children }) {
         <meta name="supported-color-schemes" content="light" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-[1440px] mx-auto overflow-x-hidden scroll-j scroll-smooth`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto overflow-x-hidden scroll-j scroll-smooth`}
       >
-        <header className="bg-[#005432] rounded-bl-[150px] md:rounded-bl-[250px]">
+        <header className="bg-[#005432]">
           <div className="header-top-area flex flex-col md:flex-row justify-between px-2.5 py-5 lg:px-24">
             <div className="mb-2 md:mb-0">
               <h1 className="sr-only">소이컴퍼니 (SOI company)</h1>
@@ -85,18 +85,18 @@ export default function RootLayout({ children }) {
                 브랜팅부터 콘텐츠까지, 마케팅의 본질을 짚습니다.
               </h2>
             </div>
-            <Image
+            {/* <Image
               src="/head-img.png"
               alt="소이컴퍼니 로고"
               className="hidden md:block w-96 h-96"
               width={180}
               height={38}
               priority
-            />
+            /> */}
           </article>
         </header>
 
-        {children}
+        <div className="max-w-[1440px] mx-auto">{children}</div>
 
         <footer className="bg-[#005432] py-5 px-3 text-white text-center">
           <p className="mb-2">

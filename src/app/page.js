@@ -115,7 +115,18 @@ export default function Home() {
     "/logo-slide-22.png",
     "/logo-slide-23.png",
     "/logo-slide-24.png",
-    "/logo-slide-25.png",
+    "/logo-slide-26.png",
+    "/logo-slide-27.png",
+    "/logo-slide-28.png",
+    "/logo-slide-29.png",
+    "/logo-slide-30.png",
+  ];
+
+  const youtubeVideoList = [
+    "VMZlfro7XIk",
+    "TpcgZp7DqEo",
+    "dXbR0zsf28",
+    "bRPAO_mxV0k",
   ];
 
   return (
@@ -154,7 +165,7 @@ export default function Home() {
           </div>
         </article>
 
-        <ul className="mt-15 text-sm text-[#005432] text-center xl:flex xl:border-t-[20px] xl:justify-between">
+        <ul className="mt-15 text-sm text-[#005432] text-center xl:flex xl:justify-between">
           {historyList.map((list, index) => (
             <li key={index} className="mb-5">
               <p>{list.companyRole}</p>
@@ -443,14 +454,27 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="lg:flex lg:gap-5">
+            <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {youtubeVideoList.map((id, index) => (
+                <div key={index} className="relative w-full pb-[56.25%]">
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full"
+                    src={`https://www.youtube.com/embed/${id}/mqdefault.jpg`}
+                    title={`youtube-${index}`}
+                    frameBorder="0"
+                    allowFullScreen
+                  />
+                </div>
+              ))}
+            </div>
+            {/* <div className="lg:flex lg:gap-5">
               <div className="w-full relative aspect-[12/10] mb-6 lg:max-h-[400px]">
                 <Image src="/youtube-1.png" alt="youtube1" fill unoptimized />
               </div>
               <div className="w-full relative aspect-[2/3]">
                 <Image src="/youtube-2.png" alt="youtube2" fill unoptimized />
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="mb-2">
