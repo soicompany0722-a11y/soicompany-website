@@ -47,11 +47,11 @@ export default function Home() {
         img: "/introduce-5.png",
         text: "유튜브·홍보영상 기획/촬영/편집 처음부터 끝까지, 병원에 꼭 맞는 영상으로 함께합니다. 16년간 쌓아온 노하우로 기획부터 촬영, 편집까지 믿고 맡기실 수 있습니다.",
       },
-      {
-        title: "행정관리자",
-        img: "/introduce-6.png",
-        text: "병원 인하우스 근무, 대외 협약 및 계약을 담당하고 있습니다. 병원현장을 잘 아는 행정 실무자입니다. 8년간의 인하우스 경험으로, 행정과 노무, 협약까지 세심하게 챙깁니다.",
-      },
+      // {
+      //   title: "행정관리자",
+      //   img: "/introduce-6.png",
+      //   text: "병원 인하우스 근무, 대외 협약 및 계약을 담당하고 있습니다. 병원현장을 잘 아는 행정 실무자입니다. 8년간의 인하우스 경험으로, 행정과 노무, 협약까지 세심하게 챙깁니다.",
+      // },
     ],
     doingList = [
       {
@@ -123,9 +123,13 @@ export default function Home() {
   ];
 
   const youtubeVideoList = [
+    "5KCVuWdB6ws",
+    "Q0dnGSonhnE",
+    "JoObSyAM028",
+    "rq0dUyubnEE",
+    "zD_a_Zy_1JY",
     "VMZlfro7XIk",
     "TpcgZp7DqEo",
-    "dXbR0zsf28",
     "bRPAO_mxV0k",
   ];
 
@@ -138,7 +142,7 @@ export default function Home() {
               소이컴퍼니 소개
             </h3>
             <p className="text-[22px] tracking-tighter md:text-3xl font-bold md:leading-11">
-              병원 마케팅 팀장 12년 경력 대표와 <br />각 분야 전문가가 모인 팀
+              병원 마케팅 팀장 13년 경력 대표와 <br />각 분야 전문가가 모인 팀
             </p>
           </div>
           <div className="md:flex gap-8">
@@ -150,7 +154,7 @@ export default function Home() {
                 <b className="text-3xl mr-1">최지훈</b>소이컴퍼니 대표
               </p>
               <span className="inline-block mb-5">
-                병원 인하우스 마케팅 경력 12년
+                병원 인하우스 마케팅 경력 13년
               </span>
               <p className="break-keep text-sm">
                 병원 안에서 직접 부딪히고, 현장의 흐름을 읽으며 마케팅을
@@ -165,15 +169,15 @@ export default function Home() {
           </div>
         </article>
 
-        <ul className="mt-15 text-sm text-[#005432] text-center xl:flex xl:justify-between">
+        {/* <ul className="mt-15 text-sm text-[#005432] text-center xl:flex xl:justify-between">
           {historyList.map((list, index) => (
             <li key={index} className="mb-5">
               <p>{list.companyRole}</p>
               <p>{list.companyStats}</p>
             </li>
           ))}
-        </ul>
-        <article className="mt-28 md:mt-40 flex flex-col items-center md:grid md:grid-cols-3 md:gap-3 lg:grid-cols-5">
+        </ul> */}
+        <article className="mt-28 md:mt-40 flex flex-col items-center md:grid md:grid-cols-2 md:gap-3 lg:grid-cols-4">
           {teamList.map((item, index) => (
             <li key={index} className={cardClass}>
               <div>
@@ -454,7 +458,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {youtubeVideoList.map((id, index) => (
                 <div key={index} className="relative w-full pb-[56.25%]">
                   <iframe

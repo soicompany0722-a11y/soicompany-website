@@ -30,6 +30,9 @@ export const metadata = {
   ],
   verification: {
     google: "0QmkwloXsHGYlaL1qEpylq-RCVRjdnMr8K5H0ZoMmnQ",
+    other: {
+      "naver-site-verification": "a2cd023e4a8459895ea7aa5361b0b29447e7aebe",
+    },
   },
   icons: {
     icon: "/favicon.png",
@@ -69,7 +72,12 @@ export default function RootLayout({ children }) {
                 <a href="#test" className="p-1 cursor-pointer">
                   협력업체
                 </a>
-                <a href="#about" className="p-1 cursor-pointer">
+                <a
+                  href="https://form.naver.com/response/qNbUNo4KnG-9beVNNVX72w"
+                  className="p-1 cursor-pointer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   상담
                 </a>
               </ul>
