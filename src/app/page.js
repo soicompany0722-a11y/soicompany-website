@@ -2,28 +2,28 @@ import Image from "next/image";
 import MarketingSwiper from "./components/MarketingSwiper";
 
 export default function Home() {
-  const historyList = [
-    {
-      companyRole: "내몸사랑한의원 마케팅팀 / 팀장",
-      companyStats: "사원수: 11명 / 매출액: 12억 이상",
-    },
-    {
-      companyRole: "메가젠임플란트 마케팅팀 / 과장",
-      companyStats: "사원 수 : 330명 / 매출액 800억 이상",
-    },
-    {
-      companyRole: "서울위드치과 마케팅팀 / 팀장",
-      companyStats: "사원 수: 60명 / 매출액: 60억 이상",
-    },
-    {
-      companyRole: "서울나우병원 기획홍보팀 / 팀장",
-      companyStats: "사원 수: 150명 / 매출액: 150억 이상",
-    },
-    {
-      companyRole: "생기가득한방병원 마케팅팀 / 팀장",
-      companyStats: "사원수 : 70명 / 매출액 : 75억 이상",
-    },
-  ];
+  // const historyList = [
+  //   {
+  //     companyRole: "내몸사랑한의원 마케팅팀 / 팀장",
+  //     companyStats: "사원수: 11명 / 매출액: 12억 이상",
+  //   },
+  //   {
+  //     companyRole: "메가젠임플란트 마케팅팀 / 과장",
+  //     companyStats: "사원 수 : 330명 / 매출액 800억 이상",
+  //   },
+  //   {
+  //     companyRole: "서울위드치과 마케팅팀 / 팀장",
+  //     companyStats: "사원 수: 60명 / 매출액: 60억 이상",
+  //   },
+  //   {
+  //     companyRole: "서울나우병원 기획홍보팀 / 팀장",
+  //     companyStats: "사원 수: 150명 / 매출액: 150억 이상",
+  //   },
+  //   {
+  //     companyRole: "생기가득한방병원 마케팅팀 / 팀장",
+  //     companyStats: "사원수 : 70명 / 매출액 : 75억 이상",
+  //   },
+  // ];
   const cardClass =
     "w-3xs md:w-auto h-[410px] relative rounded-[10px] shadow-[0_0_10px_-5px_rgba(0,0,0,0.6)] bg-white list-none p-7.5 hover:scale-105 active:scale-105 transition-transform duration-300 ease-in-out ";
   const teamList = [
@@ -122,15 +122,26 @@ export default function Home() {
     "/logo-slide-30.png",
   ];
 
+  const introduceSliderList = [
+    "/introduce-1.jpg",
+    "/introduce-2.jpg",
+    "/introduce-3.jpg",
+    "/introduce-4.jpg",
+    "/introduce-5.jpg",
+    "/introduce-6.jpg",
+    "/introduce-7.jpg",
+    "/introduce-8.jpg",
+  ];
+
   const youtubeVideoList = [
     "5KCVuWdB6ws",
-    "Q0dnGSonhnE",
-    "JoObSyAM028",
-    "rq0dUyubnEE",
-    "zD_a_Zy_1JY",
-    "VMZlfro7XIk",
+    "2JUFay1qeBo",
+    "zdlUPlZm5IM",
+    "EPT5K70lEcs",
+    "ndHnj1vFLC0",
+    "b0pwqSeRn1U",
+    "tku_szFw3uU",
     "TpcgZp7DqEo",
-    "bRPAO_mxV0k",
   ];
 
   return (
@@ -177,6 +188,41 @@ export default function Home() {
             </li>
           ))}
         </ul> */}
+
+        <article>
+          <p className="mt-[60px] font-bold text-[#005432] text-xl">
+            “13년, 병원 내부 마케팅 팀장으로서,
+            <br />
+            실무 현장에서 검증된 전략으로 병원의 브랜드 가치와 매출 상승을
+            책임지고 상승 시키겠습니다.”
+          </p>
+
+          <section id="test" className="mb-15">
+            <div className="carousel py-5 overflow-hidden flex">
+              <div className="group flex">
+                {introduceSliderList.map((list, index) => (
+                  <div
+                    key={index}
+                    className="card w-[153px] h-[110px] relative"
+                  >
+                    <Image src={list} alt={`logo${index + 1}`} fill />
+                  </div>
+                ))}
+              </div>
+              <div className="group flex">
+                {introduceSliderList.map((list, index) => (
+                  <div
+                    key={index}
+                    className="card w-[153px] h-[110px] relative"
+                  >
+                    <Image src={list} alt={`logo${index + 1}`} fill />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </article>
+
         <article className="mt-28 md:mt-40 flex flex-col items-center md:grid md:grid-cols-2 md:gap-3 lg:grid-cols-4">
           {teamList.map((item, index) => (
             <li key={index} className={cardClass}>
